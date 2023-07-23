@@ -3,9 +3,9 @@
 @section('container')
 
 <div class="row justify-content-center">
-    <div class="col-md-5 col-10">
-        <main class="form-registration w-100 m-auto">
-            <h1 class="h3 mb-4 text-center fw-normal">Registration Form</h1>
+    <div class="col-sm-4 col-11">
+        <main class="form-registration w-100 m-auto mb-5 pb-3">
+            <h1 class="mb-4 mb-sm-5 text-center fw-normal">Sign up</h1>
             <form action="/register" method="POST">
                 @csrf
                 <div class="form-floating">
@@ -51,7 +51,8 @@
                 </div>
                 <button class="w-100 my-3 btn btn-lg btn-primary" type="submit">Register</button>
             </form>
-            <small class="d-block text-center mt-3">Already register?, <a href="/login">Login now!</a></small>
+            <small class="d-block text-center mt-3">Already have account? Sign in from <a href="/login"
+                    class="text-dark">Here</a></small>
         </main>
     </div>
 </div>

@@ -1,4 +1,4 @@
-<nav class="navbar navbar-expand-lg py-lg-4">
+<nav id="navbarMenu" class="navbar navbar-expand-lg py-lg-4">
     <div class="container">
         <a class="navbar-brand me-5 pe-5 fs-2 text-primary fw-bold" href="/">SevtianBlog</a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
@@ -46,7 +46,7 @@
                 @else
                 <li class="nav-item">
                     <a class="nav-link login-link navbar-btn navbar-btn-in py-1 px-4 active fw-bold fs-6"
-                        href="/login">Login</a>
+                        href="{{ Request::is('login*') ? '/register' : '/login' }}">{{ Request::is('login*') ? 'Sign up' : 'Sign in' }}</a>
                 </li>
                 @endauth
             </ul>

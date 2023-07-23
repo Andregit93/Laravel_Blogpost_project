@@ -33,26 +33,127 @@ body {
     }
 }
 
-/* form login */
-.form-signin .form-floating:focus-within {
-    z-index: 2;
+/* Scroll Up Button */
+.scroll-up-button {
+    display: none;
+    width: 60px;
+    height: 60px;
+    position: fixed;
+    bottom: 70px;
+    right: 20px;
+    z-index: 9999;
+    background-color: #ffffff;
+    border: 3px solid #000;
+    border-radius: 50%;
+    transition: opacity 0.3s ease;
 }
 
-.form-signin input[type="email"] {
-    margin-bottom: -1px;
-    border-bottom-right-radius: 0;
-    border-bottom-left-radius: 0;
+@media (min-width: 576px) {
+    .scroll-up-button {
+        display: block;
+    }
 }
 
-.form-signin input[type="password"] {
+.scroll-up-button i {
+    color: black;
+    font-size: 35px;
+    font-weight: bolder;
+    display: flex;
+    justify-content: center;
+}
+
+.scroll-up-button:hover {
+    background-color: black;
+    border: 3px solid black;
+}
+
+.scroll-up-button:hover i {
+    color: white;
+}
+
+
+/* form sign up */
+.form-registration {
+    margin: 0 auto;
+    background-color: #fff;
+}
+
+.form-registration h1 {
+    text-align: center;
+    font-size: 40px;
+}
+
+.form-registration label {
+    display: block;
     margin-bottom: 10px;
-    border-top-left-radius: 0;
-    border-top-right-radius: 0;
 }
 
-.form-registration input {
-    border-radius: 0;
-    margin-bottom: -1px;
+.form-registration input[type="text"],
+.form-registration input[type="email"],
+.form-registration input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 2px solid #fff;
+    border-bottom: 3px solid #000000;
+    border-radius: 1px;
+}
+
+.form-registration button[type="submit"] {
+    width: 100%;
+    padding: 10px;
+    border: 3px solid #000;
+    border-radius: 3px;
+    background-color: transparent;
+    color: #000;
+    cursor: pointer;
+}
+
+.form-registration button[type="submit"]:hover {
+    background-color: #000;
+    color: #fff;
+}
+
+
+/* form sign in */
+.form-signin {
+    margin: 0 auto;
+    background-color: #fff;
+}
+
+.form-signin h1 {
+    text-align: center;
+    font-size: 40px;
+}
+
+.form-signin label {
+    display: block;
+    margin-bottom: 10px;
+}
+
+.form-signin input[type="email"],
+.form-signin input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 2px solid #fff;
+    border-bottom: 3px solid #000000;
+    border-radius: 1px;
+}
+
+.form-signin button[type="submit"] {
+    width: 100%;
+    padding: 10px;
+    border: 3px solid #000;
+    border-radius: 3px;
+    background-color: transparent;
+    color: #000;
+    cursor: pointer;
+}
+
+.form-signin button[type="submit"]:hover {
+    background-color: #000;
+    color: #fff;
 }
 
 
@@ -98,7 +199,9 @@ body {
     border: 3px solid rgba(0, 0, 0, 1);
 }
 
-/* navbar button */
+
+/* navbar style */
+/* Navbar button */
 .navbar-btn {
     position: relative;
     border: 3px solid rgba(0, 0, 0, 1);
@@ -127,15 +230,13 @@ body {
     border: 3px solid rgba(0, 0, 0, 1);
 }
 
-@media (max-width: 576px) {
+@media (max-width: 767px) {
     .navbar-btn-in {
-        width: 95.48px;
+        width: 115px;
     }
-
 }
 
-
-/* social media icon */
+/* Social media icon */
 .social-media a {
     font-size: 40px;
 }
@@ -144,12 +245,9 @@ body {
     color: #E1306C;
 }
 
-
-
-/* navbar */
 @media (min-width: 576px) {
 
-    /* Ukuran sm atau yang lebih besar */
+    /* Size for 'sm' or larger */
     .navbar-nav .nav-link {
         position: relative;
         text-decoration: none;
@@ -183,48 +281,10 @@ body {
     .navbar-nav .nav-item .login-link::after {
         display: none;
     }
-
 }
 
 
-/* Scroll Up Button */
-.scroll-up-button {
-    display: none;
-    width: 60px;
-    height: 60px;
-    position: fixed;
-    bottom: 70px;
-    right: 20px;
-    z-index: 9999;
-    background-color: #ffffff;
-    border: 3px solid #000;
-    border-radius: 50%;
-    transition: opacity 0.3s ease;
-}
-
-@media (min-width: 576px) {
-    .scroll-up-button {
-        display: block;
-    }
-}
-
-.scroll-up-button i {
-    color: black;
-    font-size: 35px;
-    font-weight: bolder;
-    display: flex;
-    justify-content: center;
-}
-
-.scroll-up-button:hover {
-    background-color: black;
-    border: 3px solid black;
-}
-
-.scroll-up-button:hover i {
-    color: white;
-}
-
+/* pagination */
 .pagination .page-link {
     display: flex;
     justify-content: center;

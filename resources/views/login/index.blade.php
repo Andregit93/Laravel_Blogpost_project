@@ -2,10 +2,10 @@
 
 @section('container')
 
-<div class="row justify-content-center">
-    <div class="col-lg-5 col-10">
+<div class="row justify-content-center mt-5">
+    <div class="col-lg-4 col-11">
         <main class="form-signin w-100 m-auto">
-            <h1 class="h3 mb-4 text-center fw-normal">Please Login</h1>
+            <h1 class="mb-sm-5 mb-4 text-center fw-normal">Sign in</h1>
             @if(session()->has('success'))
             <script>
                 document.addEventListener('DOMContentLoaded', function () {
@@ -58,7 +58,7 @@
                 </div>
                 <button class="w-100 my-2 btn btn-lg btn-primary" type="submit">Login</button>
             </form>
-            <small class="d-block text-center mt-3">Not register?, <a href="/register">Register now!</a></small>
+            <small class="d-block text-center mt-3">Don't have an account yet? Sign up from, <a href="/register" class="text-dark">Here.</a></small>
         </main>
     </div>
 </div>

@@ -38,8 +38,8 @@
 @endif
 
 <div class="table-responsive col-sm-10 col-12 mb-3">
-    <a href="/dashboard/posts/create" class="btn btn-primary mb-3"><span data-feather="file-plus"
-            class="align-text-bottom"></span> Create New Post</a>
+        <a href="/dashboard/posts/create" class="btn btn-primary mb-3"><span data-feather="file-plus"
+                class=""></span> Create New Post</a>
     <table class="table table-striped mb-5">
         <thead class="text-center">
             <tr>

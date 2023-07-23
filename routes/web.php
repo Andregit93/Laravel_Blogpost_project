@@ -21,14 +21,14 @@ use App\Http\Controllers\DashboardUserController;
 |
 */
 
-Route::get('/welcome', function() {
+Route::get('/welcome', function () {
     return view('welcome');
 });
 
 Route::get('/', function () {
     return view('home', [
         "title" => "Home",
-        'image' => 'Andre.JPG'
+        'image' => 'home.JPG'
     ]);
 });
 
@@ -41,7 +41,7 @@ Route::get('/about', function () {
     ]);
 });
 
-Route::get('/categories', function() {
+Route::get('/categories', function () {
     return view('categories', [
         'title' => 'Post Category',
         'categories' => Category::all()
@@ -58,7 +58,7 @@ Route::post('/logout', [LoginController::class, 'logout']);
 Route::get('/register', [RegisterController::class, 'index'])->middleware('guest');
 Route::post('/register', [RegisterController::class, 'store']);
 
-Route::get('/dashboard', function() {
+Route::get('/dashboard', function () {
     return view('dashboard.index');
 })->middleware('auth');
 

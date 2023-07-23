@@ -10,22 +10,23 @@ use App\Http\Controllers\Controller;
 
 class PostController extends Controller
 {
-    public function index() {
+    public function index()
+    {
         $title = '';
-        if(request('category')) {
+        if (request('category')) {
             $category = Category::firstWhere('slug', request('category'));
-            $title = ' in Category '. $category->name;
+            $title = ' in Category ' . $category->name;
         }
-        if(request('author')) {
+        if (request('author')) {
             $author = User::firstWhere('username', request('author'));
-            $title = ' by '. $author->name;
+            $title = ' by ' . $author->name;
         }
 
         // API request
         // $endPoint = 'https://api.unsplash.com/photos/random/?client_id=AQ5rwq6065kVX5pChqMaTU66G2GCVrGc1RwXa8-N8hw';
         // $images = file_get_contents($endPoint);
         // $data = json_decode($images, true);
-        
+
         return view('blog', [
             "title" => "All Post" . $title,
             // "posts" => Post::all(),
@@ -33,12 +34,11 @@ class PostController extends Controller
         ]);
     }
 
-    public function show(Post $post) {
+    public function show(Post $post)
+    {
         return view('post', [
             "title" => "Post",
             "post" => $post,
         ]);
     }
-
-
 }

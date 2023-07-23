@@ -34,7 +34,7 @@
 @endif
 
 <div class="table-responsive col-lg-8">
-  <a href="/dashboard/categories/create" class="btn btn-primary mb-3"><span data-feather="file-plus" class="align-text-bottom"></span> Create New Category</a>
+  <a href="/dashboard/categories/create" class="btn btn-primary mb-3"><span data-feather="file-plus" class=""></span> Create New Category</a>
     <table class="table table-striped table-lg mb-5">
       <thead>
         <tr class="text-center">

@@ -57,7 +57,7 @@
 <div class="container">
     <div class="row justify-content-center">
         @foreach( $posts->skip(1) as $post )
-            <div class="col-md-4">
+            <div class="col-lg-6 col-md-6 col-sm-9 col-xl-4">
                 <div class="card card-2 mb-5 rounded">
                     <p class="position-absolute py-2 border-4 px-4 rounded category-label"><a href="/blog?category={{ $post->category->slug }}" style="color: black" class="text-decoration-none fw-bolder">{{ $post->category->name }}</a></p>
                     <div class="card-body p-5">

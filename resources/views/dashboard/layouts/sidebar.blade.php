@@ -58,7 +58,7 @@
       <li class="nav-item">
         <button type="submit" class="btn btn-dark px-3 my-4">
           <div class="d-flex align-items-center">
-            <span data-feather="log-out" class="me-2"></span>
+            <span data-feather="home" class="me-2"></span>
             <a href="/" style="text-decoration: none" class="text-white">Home</a>
           </div>
         </button>
