@@ -45,10 +45,10 @@
       </thead>
       <tbody >
         @foreach ($categories as $category)
-        <tr>
-          <td class="text-center">{{ $loop->iteration }}.</td>
+        <tr class="text-center">
+          <td>{{ $loop->iteration }}.</td>
           <td class="text-capitalize">{{ $category->name }}</td>
-          <td class="text-center">
+          <td>
             <a href="/dashboard/categories/{{ $category->id }}/edit" class="badge bg-success"><span data-feather="edit" class="align-text-bottom"></span></a>
             <form action="/dashboard/categories/{{ $category->id }}" method="post" onsubmit="return confirmDelete(event)" class="d-inline">
               @method('delete')

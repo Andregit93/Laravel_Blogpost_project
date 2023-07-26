@@ -53,13 +53,13 @@ class DashboardPostController extends Controller
             'body' => 'required'
         ]);
 
-        if($request->file('image')) {
+        if ($request->file('image')) {
             $validatedData['image'] = $request->file('image')->store('post-images');
         }
 
         $validatedData['user_id'] = auth()->user()->id;
         $validatedData['excerpt'] = Str::limit(strip_tags($request->body), 100);
-        
+
         Post::create($validatedData);
 
         return redirect('/dashboard/posts')->with('success', 'New post has been added!');
@@ -108,14 +108,14 @@ class DashboardPostController extends Controller
             'body' => 'required'
         ]);
 
-        if($request->slug != $post->slug) {
+        if ($request->slug != $post->slug) {
             $rules['slug'] = 'required|unique:posts';
         }
 
         $validatedData = $request->validate($rules);
 
-        if($request->file('image')) {
-            if($request->oldImage) {
+        if ($request->file('image')) {
+            if ($request->oldImage) {
                 Storage::delete($request->oldImage);
             }
             $validatedData['image'] = $request->file('image')->store('post-images');
@@ -125,7 +125,7 @@ class DashboardPostController extends Controller
         $validatedData['excerpt'] = Str::limit(strip_tags($request->body), 100);
 
         Post::where('id', $post->id)
-                ->update($validatedData);
+            ->update($validatedData);
 
         return redirect('/dashboard/posts')->with('success', 'Post has been updated!');
     }
@@ -138,17 +138,16 @@ class DashboardPostController extends Controller
      */
     public function destroy(Post $post)
     {
-        
-        if($post->image) {
+
+        if ($post->image) {
             Storage::delete($post->image);
         }
         Post::destroy($post->id);
 
         return redirect('/dashboard/posts')->with('deleteSuccess', 'Post has been delete!');
-        
     }
 
-    public function checkSlug(Request $request) 
+    public function checkSlug(Request $request)
     {
         $slug = SlugService::createSlug(Post::class, 'slug', $request->title);
         return response()->json(['slug' => $slug]);

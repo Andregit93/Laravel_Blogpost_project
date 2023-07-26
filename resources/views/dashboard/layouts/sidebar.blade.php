@@ -22,6 +22,14 @@
           <span>ADMINISTRATOR</span>
         </h6>
         <li class="nav-item">
+          <a class="nav-link {{ Request::is('dashboard/blog*') ? 'active' : '' }}" href="/dashboard/blog">
+            <div class="d-flex align-items-center">
+              <span data-feather="file-text" class="me-2"></span>
+              <span>Posts Management</span>
+            </div>
+          </a>
+        </li>
+        <li class="nav-item">
           <a class="nav-link {{ Request::is('dashboard/categories*') ? 'active' : '' }}" href="/dashboard/categories">
             <div class="d-flex align-items-center">
               <span data-feather="grid" class="me-2"></span>
@@ -43,6 +51,14 @@
         <h6 class="sidebar-heading fw-bold d-flex justify-content-between align-items-center px-3 pt-3 pt-sm-4 text-muted fs-6">
           <span>ADMINISTRATOR</span>
         </h6>
+          <li class="nav-item">
+            <a class="nav-link {{ Request::is('dashboard/blog*') ? 'active' : '' }}" href="/dashboard/blog">
+              <div class="d-flex align-items-center">
+                <span data-feather="file-text" class="me-2"></span>
+                <span>Posts Management</span>
+              </div>
+            </a>
+          </li>
         <li class="nav-item">
           <a class="nav-link {{ Request::is('dashboard/categories*') ? 'active' : '' }}" href="/dashboard/categories">
             <div class="d-flex align-items-center">

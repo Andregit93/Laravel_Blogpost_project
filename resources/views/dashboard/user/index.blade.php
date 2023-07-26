@@ -47,13 +47,13 @@
         </thead>
         <tbody >
           @foreach ($users as $user)
-          <tr>
-            <td class="text-center">{{ $loop->iteration }}.</td>
+          <tr class="text-center">
+            <td>{{ $loop->iteration }}.</td>
             <td class="text-capitalize">{{ $user->name }}</td>
-            <td class="text-capitalize text-center">{{ $user->email }}</td>
-            <td class="text-capitalize text-center"> {{ $user->is_superAdmin ? 'Super Admin' : ($user->is_admin ? 'Second Admin' : 'User') }}</td>
-            <td class="text-center">
-              <a href="/dashboard/user/{{ $user->id }}/edit" class="badge bg-success"><span data-feather="edit" class="align-text-bottom"></span></a>
+            <td class="text-capitalize">{{ $user->email }}</td>
+            <td class="text-capitalize"> {{ $user->is_superAdmin ? 'Super Admin' : ($user->is_admin ? 'Second Admin' : 'User') }}</td>
+            <td>
+              <a href="/dashboard/user/{{ $user->id }}/edit" class="badge bg-success mb-1 mb-sm-0"><span data-feather="edit" class="align-text-bottom"></span></a>
               <form action="/dashboard/user/{{ $user->id }}" method="post" onsubmit="return confirmDelete(event)" class="d-inline">
                 @method('delete')
                 @csrf

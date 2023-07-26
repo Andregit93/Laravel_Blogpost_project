@@ -28,19 +28,19 @@
     <div class="row justify-content-center">
         <div class="col-md-9">
             <div class="card mb-5 ">
-                <div class="card-body text-center p-5">
+                <div class="card-body text-center p-4 p-sm-5">
                     <div style="max-height: 400px; overflow: hidden;">
                         @if( $posts[0]->image )
                             <div class="rounded" style="max-height: 400px; overflow: hidden;">
-                                <img style="max-height: 500px;" src="{{ asset('storage/'. $posts[0]->image) }}" class="card-img-top" alt="{{ $posts[0]->category->name }}">
+                                <img src="{{ asset('storage/'. $posts[0]->image) }}" class="card-img-top" alt="{{ $posts[0]->category->name }}">
                             </div>
                         @else
                             <div class="rounded" style="max-height: 400px; overflow: hidden;">
-                                <img style="max-height: 500px;" src="https://images.unsplash.com/photo-1590309284223-3946577eb10e?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NXx8c3dpc3N8ZW58MHwwfDB8fA%3D%3D&auto=format&fit=crop&w=600&q=60" class="card-img-top" alt="{{ $posts[0]->category->name }}">
+                                <img src="https://images.unsplash.com/photo-1590309284223-3946577eb10e?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NXx8c3dpc3N8ZW58MHwwfDB8fA%3D%3D&auto=format&fit=crop&w=600&q=60" class="card-img-top" alt="{{ $posts[0]->category->name }}">
                             </div>
                         @endif
                     </div>
-                    <h3 class="card-title mt-3"><a href="/post/{{ $posts[0]->slug }}" class="text-decoration-none text-dark">{{ $posts[0]->title }}</a></h3>
+                    <h3 class="card-title mt-3 text-capitalize"><a href="/post/{{ $posts[0]->slug }}" class="text-decoration-none text-dark">{{ $posts[0]->title }}</a></h3>
                     <p class="card-text">
                         <small class="text-muted">By : <a href="/blog?author={{ $posts[0]->author->username }}" class="text-decoration-none text-dark fw-bold">{{ $posts[0]->author->name }}</a> in <a href="/blog?category={{ $posts[0]->category->slug }}" class="text-decoration-none text-dark fw-bold">{{ $posts[0]->category->name }}</a> | {{ $posts[0]->created_at->diffForHumans() }}</small>
                     </p>
@@ -63,14 +63,14 @@
                     <div class="card-body p-5">
                         @if( $post->image )
                             <div class="rounded" style="max-height: 400px; overflow: hidden;">
-                                <img style="max-height: 500px;" src="{{ asset('storage/'. $post->image) }}" class="card-img-top my-3 rounded" alt="{{ $post->category->name }}">
+                                <img src="{{ asset('storage/'. $post->image) }}" class="card-img-top my-3" alt="{{ $post->category->name }}">
                             </div>
                         @else
                             <div class="rounded" style="max-height: 400px; overflow: hidden;">
                                 <img src="https://images.unsplash.com/photo-1590309284223-3946577eb10e?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NXx8c3dpc3N8ZW58MHwwfDB8fA%3D%3D&auto=format&fit=crop&w=600&q=60" class="card-img-top my-3 rounded" alt="{{ $post->category->name }}">
                             </div>
                         @endif
-                        <h3 class="card-title">{{ $post->title }}</h3>
+                        <h3 class="card-title text-capitalize">{{ $post->title }}</h3>
                         <p class="card-text">
                             <small class="text-muted">By : <a href="/blog?author={{ $post->author->username }}" class="text-decoration-none text-dark fw-bold">{{ $post->author->name }}</a> | {{ $post->created_at->diffForHumans() }}</small>
                         </p>

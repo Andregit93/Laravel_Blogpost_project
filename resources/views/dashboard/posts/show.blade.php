@@ -20,12 +20,8 @@
         </div>
         <div class="col-sm-8">
             @if( $post->image )
-            <div style="max-height: 400px; overflow: hidden;">
-                <img style="max-height: 500px;" src="{{ asset('storage/'. $post->image) }}" class="card-img-top my-3" alt="{{ $post->category->name }}">
-            </div>
-            @else
-            <div style="max-height: 400px; overflow: hidden;">
-                <img style="max-height: 500px;" src="https://images.unsplash.com/photo-1590309284223-3946577eb10e?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NXx8c3dpc3N8ZW58MHwwfDB8fA%3D%3D&auto=format&fit=crop&w=600&q=60" class="card-img-top my-3" alt="{{ $post->category->name }}">
+            <div class="my-3 rounded" style="max-height: 400px; overflow: hidden;">
+                <img src="{{ asset('storage/'. $post->image) }}" alt="{{ $post->category->name }}">
             </div>
             @endif
             <div class="mt-3">

@@ -33,6 +33,12 @@ body {
     }
 }
 
+@media (max-width: 576px) {
+    .postTitle {
+        font-size: x-large;
+    }
+}
+
 /* Scroll Up Button */
 .scroll-up-button {
     display: none;

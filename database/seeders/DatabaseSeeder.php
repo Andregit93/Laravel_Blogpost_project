@@ -24,19 +24,18 @@ class DatabaseSeeder extends Seeder
         //         'name' => 'Test User',
         //         'email' => 'test@example.com',
         //     ]);
-            
-            User::create([
-                    'name' => 'Andre Sevtian',
-                    'username' => 'andresevtian',
-                    'email' => 'andresevtian@gmail.com',
-                    'password' => bcrypt('password')
-                ]);
-                
 
-        
-        // User and Post factory
-        User::factory(3)->create();
-        Post::factory(30)->create();
+        User::create([
+            'name' => 'name',
+            'username' => 'username',
+            'email' => 'name@gmail.com',
+            'password' => bcrypt('password')
+        ]);
+
+
+        // // User and Post factory
+        // User::factory(3)->create();
+        // Post::factory(30)->create();
 
         Category::create([
             'name' => 'Web Programming',

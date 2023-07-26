@@ -7,7 +7,7 @@
 </div>
 
 <div class="col-lg-8 mb-5">
-    <form method="post" action="/dashboard/posts/{{ $post->slug }}" enctype="multipart/form-data">
+    <form method="post" action="/dashboard/blog/{{ $post->slug }}" enctype="multipart/form-data">
         @method('put')
         @csrf
         <div class="mb-3">
@@ -29,18 +29,6 @@
                 {{ $message }}
             </div>
             @enderror
-        </div>
-        <div class="mb-3">
-            <label for="category" class="form-label">Category</label>
-            <select class="form-select" name="category_id">
-                @foreach($categories as $category)
-                @if(old('category_id', $post->category_id) == $category->id)
-                <option value="{{ $category->id }}" selected>{{ $category->name }}</option>
-                @else
-                <option value="{{ $category->id }}">{{ $category->name }}</option>
-                @endif
-                @endforeach
-            </select>
         </div>
         <div class="mb-3">
             <label for="image" class="form-label">Image</label>
@@ -75,7 +63,7 @@
     const slug = document.querySelector('#slug');
 
     title.addEventListener('change', function () {
-        fetch('/dashboard/posts/createSlug?title=' + title.value)
+        fetch('/dashboard/blog/createSlug?title=' + title.value)
             .then(response => response.json())
             .then(data => slug.value = data.slug)
     });

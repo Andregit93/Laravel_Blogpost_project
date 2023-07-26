@@ -88,13 +88,6 @@ body {
   box-shadow: 0 0 0 3px rgba(255, 255, 255, .25);
 }
 
-#sidebarMenu .nav.flex-column.mt-auto.ms-3 {
-  position: absolute;
-  bottom: -380px; 
-  left: 40%;
-  transform: translateX(-50%);
-}
-
 
 /* CSS untuk tampilan sidebar pada handphone */
 @media (max-width: 767px) {
@@ -112,13 +105,6 @@ body {
   /* CSS untuk mengatur tampilan saat sidebar ditampilkan */
   #sidebarMenu.show {
     left: 50%;
-  }
-
-  #sidebarMenu .nav.flex-column.mt-auto.ms-3 {
-    position: absolute;
-    bottom: -35%; 
-    left: 40%;
-    transform: translateX(-50%);
   }
 
 }
